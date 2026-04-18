@@ -1,3 +1,4 @@
+
 """
 Django settings for dominant_design project.
 
@@ -19,19 +20,23 @@ from django.conf.global_settings import SECRET_KEY
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
+
 SECRET_KEY = '-4#uzafqgnzz2h1d&5e9ajgs_zvczj@vf1a$d7fbev(18pc60l'
 # SECURITY WARNING: keep the secret key used in production secret
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "dominant-design-backend-1.onrender.com",
+    ".onrender.com",
+]
 
-
+CSRF_TRUSTED_ORIGINS = [
+    "https://dominant-design-backend-1.onrender.com",
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -83,10 +88,10 @@ WSGI_APPLICATION = 'dominant_design.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dominant',
+        'NAME': 'dominant_design',
         'USER': 'aisha',
-        'PASSWORD': '1234',
-        'HOST': 'localhost',
+        'PASSWORD': 'rQvzgvtbOlOX9JhkzC5Lwm0IItBGXiQh',
+        'HOST': 'dpg-d7hg8l9f9bms73fjqrv0-a.oregon-postgres.render.com',
         'PORT': '5432',
     }
 }
@@ -128,15 +133,13 @@ USE_TZ = True
 
 
 
-# MEDIA
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# STATIC
+
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# DRF
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny'
@@ -145,12 +148,13 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 5,
 }
 
-# EMAIL (REAL)
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'aishaxom0010@gmail.com'
-EMAIL_HOST_PASSWORD = 'odgejdirfpsgvyri'
+
+EMAIL_HOST_USER ="aishaxon0010@gmail.com"
+EMAIL_HOST_PASSWORD ="bzjngbmysicpveng"
 
 
