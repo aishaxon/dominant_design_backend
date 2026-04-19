@@ -30,8 +30,10 @@ SECRET_KEY = '-4#uzafqgnzz2h1d&5e9ajgs_zvczj@vf1a$d7fbev(18pc60l'
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "dominant-design-backend-1.onrender.com",
-    ".onrender.com",
+    "dominant-design-backend.onrender.com",
+    "*.onrender.com",
+    "localhost",
+    "127.0.0.1"
 ]
 
 
