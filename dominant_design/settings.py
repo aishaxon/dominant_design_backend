@@ -34,9 +34,7 @@ ALLOWED_HOSTS = [
     ".onrender.com",
 ]
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://dominant-design-backend-1.onrender.com",
-]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -64,6 +62,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'dominant_design.urls'
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 TEMPLATES = [
     {
@@ -156,5 +155,8 @@ EMAIL_USE_TLS = True
 
 EMAIL_HOST_USER ="aishaxon0010@gmail.com"
 EMAIL_HOST_PASSWORD ="bzjngbmysicpveng"
+
+
+
 
 
