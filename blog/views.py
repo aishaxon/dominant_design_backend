@@ -101,13 +101,13 @@ class ContactCreate(CreateAPIView):
             send_mail(
                 subject="Yangi murojaat",
                 message=str(request.data),
-                from_email=settings.EMAIL_HOST_USER,
-                recipient_list=[settings.EMAIL_HOST_USER],
+                from_email="aishaxon0010@gmail.com",
+                recipient_list=["aishaxon0010@gmail.com"],
                 fail_silently=False,
             )
-        except Exception:
+        except Exception :
             return Response(
-                {"error": "Email yuborilmadi"},
+                {"error": "Xatolik mavjud"},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 

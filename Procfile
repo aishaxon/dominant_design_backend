@@ -1,0 +1,2 @@
+web:gunicorn
+dominant_design.wsgi:application
