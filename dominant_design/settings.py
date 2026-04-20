@@ -11,7 +11,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
-from pathlib import Path
 import os
 from pathlib import Path
 
@@ -27,7 +26,7 @@ SECRET_KEY = '-4#uzafqgnzz2h1d&5e9ajgs_zvczj@vf1a$d7fbev(18pc60l'
 # SECURITY WARNING: keep the secret key used in production secret
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "dominant-design-backend.onrender.com",
