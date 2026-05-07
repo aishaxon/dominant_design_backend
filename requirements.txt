@@ -1,6 +1,8 @@
 django
 django-cors-headers
 djangorestframework
+drf-yasg
+django-filter
 gunicorn
 whitenoise
 psycopg2-binary
