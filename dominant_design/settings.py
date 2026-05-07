@@ -32,7 +32,7 @@ ALLOWED_HOSTS = [
     "dominant-design-backend.onrender.com",
     "*.onrender.com",
     "localhost",
-    "127.0.0.1"
+    "127.0.0.1",
 ]
 CSRF_TRUSTED_ORIGINS = [
     "https://dominant-design-backend.onrender.com",
@@ -162,6 +162,7 @@ EMAIL_HOST_USER ="aishaxon0010@gmail.com"
 EMAIL_HOST_PASSWORD ="bzjngbmysicpveng"
 
 
-
-
-
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
