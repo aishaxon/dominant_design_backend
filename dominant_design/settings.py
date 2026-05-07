@@ -27,7 +27,7 @@ SECRET_KEY = '-4#uzafqgnzz2h1d&5e9ajgs_zvczj@vf1a$d7fbev(18pc60l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+CORS_ALLOW_ALL_ORIGINS = True
 ALLOWED_HOSTS = [
     "dominant-design-backend.onrender.com",
     "*.onrender.com",
@@ -51,10 +51,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'blog',
     'drf_yasg',
-
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
