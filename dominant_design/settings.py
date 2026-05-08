@@ -166,3 +166,22 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
+const cors = require('cors');
+app.use(cors({
+    origin: '*', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+app.get('/api/data', (req, res) => {
+    try {
+        const info = { message: "Ma'lumot muvaffaqiyatli keldi!" };
+        res.status(200).json(info);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server ${PORT}-portda muvaffaqiyatli ishga tushdi`);
+});
